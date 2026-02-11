@@ -13,6 +13,7 @@
             margin: 0;
             background: #f4f6f9;
             text-align: center;
+            line-height: 1.6;
         }
 
         header {
@@ -24,29 +25,40 @@
         section {
             margin: 40px auto;
             background: white;
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             max-width: 1000px;
+            text-align: left;
         }
 
         canvas {
             max-width: 600px;
             margin: 20px auto;
+            display: block;
         }
 
         video {
-            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         img {
             width: 100%;
-            max-width: 900px;
-            margin-top: 20px;
+            max-width: 800px;
+            display: block;
+            margin: 20px auto;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        ul {
+            margin-top: 15px;
         }
 
         footer {
@@ -54,6 +66,7 @@
             color: white;
             padding: 15px;
             margin-top: 40px;
+            text-align: center;
         }
     </style>
 </head>
@@ -65,6 +78,24 @@
     <p>Factors Affecting the Purchase of a Product</p>
     <p>Total Responses: 54 | FYBSCIT Semester 2</p>
 </header>
+
+<!-- Introduction Section -->
+
+<section>
+    <h2>Introduction</h2>
+
+    <p>
+        The purpose of this survey was to analyze the major factors influencing consumer purchase decisions in today's competitive market. A structured Google Form questionnaire was designed and distributed among respondents to collect quantitative data regarding their buying behavior.
+    </p>
+
+    <p>
+        The survey focused on important variables such as age group, occupation, price sensitivity, brand reputation, advertisement influence, and product quality. A total of 54 responses were collected, with the majority belonging to the 18–25 age group, representing young and digitally active consumers.
+    </p>
+
+    <p>
+        The following graphical representations provide a clear statistical overview of consumer preferences. Each chart highlights how modern buyers evaluate price, quality, brand trust, and promotional influence before making purchasing decisions.
+    </p>
+</section>
 
 <!-- Charts Section -->
 
@@ -88,27 +119,46 @@
     <canvas id="adChart"></canvas>
 </section>
 
+<!-- Graph Explanation Section -->
+
+<section>
+    <h2>Analysis of Survey Findings</h2>
+
+    <ul>
+        <li><strong>Young Consumers Dominate:</strong> The majority of respondents fall within the 18–25 age group, indicating that purchasing trends are strongly influenced by younger, digitally active individuals.</li>
+
+        <li><strong>Students as Key Buyers:</strong> Most respondents are students, suggesting that affordability and value for money play a significant role in decision-making.</li>
+
+        <li><strong>Price Sensitivity:</strong> A large percentage of participants consider price as either very important or important, highlighting the impact of competitive pricing strategies.</li>
+
+        <li><strong>Digital Advertisement Impact:</strong> Social media and influencer marketing show stronger influence compared to traditional TV advertising.</li>
+
+        <li><strong>Multi-Factor Decision Process:</strong> Consumers do not rely on a single factor; instead, they evaluate price, quality, brand reputation, and reviews collectively before finalizing a purchase.</li>
+    </ul>
+</section>
+
 <!-- Video Section -->
 
 <section>
     <h2>Survey Presentation Video</h2>
     <p>
-        This video explains our survey methodology,
-        data collection process, and findings regarding
-        consumer purchase decisions.
+        The following video presents the methodology, data interpretation, and conclusion derived from the survey. It visually summarizes the factors affecting purchasing behavior.
     </p>
 
-    <video controls width="700" preload="metadata">
+    <video controls preload="metadata">
         <source src="survey-video.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </section>
 
-<!-- Photo Section (LAST) -->
+<!-- Photo Section -->
 
 <section>
     <h2>Survey Activity Photos</h2>
-    <p>Images captured during the data collection process.</p>
+    <p>
+        The image below captures moments from the survey process and data discussion conducted by the group members.
+    </p>
+
     <img src="survey-photo.jpg" alt="Survey Activity Photo">
 </section>
 
@@ -142,7 +192,7 @@ new Chart(document.getElementById("occupationChart"), {
     }
 });
 
-// Price Importance
+// Price Chart
 new Chart(document.getElementById("priceChart"), {
     type: 'pie',
     data: {
@@ -154,7 +204,7 @@ new Chart(document.getElementById("priceChart"), {
     }
 });
 
-// Advertisement Influence
+// Advertisement Chart
 new Chart(document.getElementById("adChart"), {
     type: 'bar',
     data: {
